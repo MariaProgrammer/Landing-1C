@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> 1С Нетиповые решения. Услуги 1С программиста.</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script> -->
+	<script defer src="libs/just-validate3.3.3.min.js"></script>
+
+	
+</head>
+<body>
+
+	<div class="modals">
+		<div class="modal-overlay">
+			<div class="modal modal--1" data-target="form-popup">
+				<button class="button__icon" data-path="close"></button>
+				<h3 class="modal-text">Оставьте заявку</h3>
+				<form name="1C" action="#" class="form form-modal" id="form" autocomplete="off" method="post" enctype="multipart/form-data" >
+					<label class="label" for="name">Имя*</label>
+						<input class="input input-name" type="text" name="name" id="name" placeholder="Введите Ваше имя" required>
+						<span class="error" aria-live="polite"></span>
+
+						<label class="label" for="tel">Телефон*</label>
+						<input class="input input-tel" type="tel" id="tel" name="tel" placeholder="Введите номер Вашего телефона" required>
+						<span class="error" aria-live="polite"></span>
+					
+					<label class="label" for="email">Емейл*</label>
+						<input class="input input-mail" type="email" id="email" placeholder="Введите Ваш email" name="email" required>
+						<span class="error" aria-live="polite"></span>
+					
+					<label class="label" for="message">Сообщение*</label>
+					<textarea class="textarea" name="message" id="message" rows="5" placeholder="Опишите Вашу проблему или вопрос" required></textarea>
+					<span class="error" aria-live="polite"></span>
+					<button class="btn btn-primary menu__item menu__link header__link_right" type="submit" id="submit-btn">Отправить заявку</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+		<header class="header">
+			<div class="wrapper">
+			<nav class="header__nav">
+				<div class="logo"><a href="index.html">
+					<img src="img/logo2.png" alt="">
+				</a>
+			</div>
+			<ul class="header__menu menu" >
+				<li class="menu__item"><a class="menu__link" href="#about">Обо мне</a></li>
+				<li class="menu__item"><a class="menu__link" href="#services">Услуги</a></li>
+				<button class="btn menu__item menu__link header__link_right" data-path="form-popup" aria-label="Контакты">Контакты</button>
+			</ul>
+				<button class="burger" data-burger aria-label="Открыть меню" aria-expanded="false">
+					<span class="burger__line"></span>
+				</button>
+			</nav>
+
+			<div class="burger__menu" data-nav>
+				<ul class="burger__list" >
+					<li class="burger__item"><a href="#about" class="burger__link">Обо мне</a></li>
+					<li class="burger__item"><a href="#services" class="burger__link">Услуги</a></li>
+					<li class="burger__item"><a href="#form" class="burger__link">Контакты</a></li>
+				</ul>
+			</div>
+
+			<div class="container__header">
+					<h1 class="header__title">Решения задач любой сложности для 1С под ключ</h1>
+					<p class="header__desc">Частный специалист</p>
+			</div>
+		</header>
+
+	<main>	
+	<section id="about" class="about">
+		<div class="about__img">
+			<img class="img" src="img/img_content.jpg" alt="">
+		</div>
+		<div class="about__content content">
+			<h2 class="title__about title scroll-item">Обо мне</h2>
+			<p class="about__text scroll-item">Приветствую! Меня зовут Александр и я работаю программистом 1C с 2003 года.</p>
+			<p class="about__text scroll-item">Имею опыт разработки, внедрения, проведения обучения.</p>
+			<p class="about__text scroll-item">Особенностью своей работы считаю умение найти решения нестандартных задач по 1C.</p>
+			<p class="about__text scroll-item">Огромный опыт в области программирования и работы по структуризации БД 1C позволяет мне решать вопросы по 1С любой сложности.</p>
+			<p class="about__text about__text-last scroll-item">Свяжитесь со мной, чтобы получить грамотное решение своей проблемы или консультацию.
+			</p>
+			<button class="btn about__link header__link_right" data-path="form-popup">Связаться</button>
+			<!-- <a class="about__link header__link_right" href="">Связаться</a> -->
+		</div>
+		
+	</section>
+
+	<section class="work content">
+		<div class="wrapper">
+			<p class="work__title title">Я разрабатываю</p>
+
+			<div class="work__container">
+				<div class="work__item">
+					<img class="work__img" src="img/award 1.svg" alt="">
+					<p>Шаблоны печати</p>
+					</div>
+				<div class="work__item">
+					<img class="work__img" src="img/award 1.svg" alt="">
+					<p>Отчеты</p>
+				
+				</div>
+				<div class="work__item">
+					<img class="work__img" src="img/award 1.svg" alt="">
+					<p>Обработки</p>
+				
+				</div>
+				<div class="work__item">
+					<img class="work__img" src="img/award 1.svg" alt="">
+				<p>Документы</p>
+				</div>
+				<div class="work__item">
+					<img class="work__img" src="img/award 1.svg" alt="">
+				<p>Взаимодействие между БД</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+		
+
+	<section id="services" class="services content">
+		<div class="wrapper">
+			<h2 class="services__title title">Мои услуги:</h2>
+			<ul class="cervices__text">
+				<li class="cervices__item-1 item">
+					
+					Разработка внешних отчетов и обработок шаблонов печати для любых конфигураций 1C;
+				</li>
+				<li class="cervices__item-2 item">Разработка и обслуживание любых конфигураций 1C;</li>
+				<li class="cervices__item-3 item">Обновление типовых и нетиповых конфигураций;</li>
+				<li class="cervices__item-4 item">Организация взаимодействия между любыми базами 1С (COM, OLE, Планы обмена, КД2);</li>
+				<li class="cervices__item-5 item">Перенос данных любой сложности из старой конфигурации 1С в новую;</li>
+				<li class="cervices__item-6 item">Внесение НСИ и документов из внешних файлов;</li>
+				<li class="cervices__item-7 item">Оптимизация создания отчетов;</li>
+				<li class="cervices__item-8 item">Консультирование по вопросам 1C.</li>
+			</ul>
+			<button class="btn about__link servises__link__container header__link_right" data-path="form-popup">Задать вопрос</button>
+			<!-- <div class="servises__link__container">
+				<a class="servises__link__container header__link_right" href="">Задать вопрос</a>
+
+			</div> -->
+			
+		
+		</div>
+	</section>
+
+	<section class="configurations content">
+		<div class="wrapper">
+			<h2 class="work__title title">Работаю с конфигурациями 1С 7.7, 1С 8.0-8.3:</h2>
+
+			<div class="configurations__container">
+				<div class="configurations__content-1 maket maket--configurations">
+					<p class="configurations__text">БП</p>
+					</div>
+				<div class="configurations__content-2 maket maket--configurations">
+					<p class="configurations__text">УТ</p>
+				</div>
+
+				<div class="configurations__content-3 maket maket--configurations">
+					<p class="configurations__text">КА</p>
+				</div>
+
+				<div class="configurations__content-4 maket maket--configurations">
+				<p class="configurations__text">УПП</p>
+				</div>
+
+				<div class="configurations__content-4 maket maket--configurations">
+					<p class="configurations__text">ЕРП</p>
+					</div>
+
+				<div class="configurations__content-5 maket maket--configurations">
+				<p class="configurations__text-5">Отраслевые решения 1С и др.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="benefits content">
+		<div class="wrapper">
+			<h2 class="benefits__title title">Преимущества работы со мной:</h2>
+			<div class="benefits__container">
+				
+				<div class="benefits__container__item">
+					<div class="benefits__img">
+						<img src="img/time.png" alt="">
+					</div>
+					<div class="benefits__container__inner">
+						<h3 class="title--center">Экономия времени</h3>
+						<p class="benefits__text">Я выполняю полный цикл работ от постановки до внедрения с последующим обучением заказчика при необходимости новому функционалу программы, и вам не придется обращаться к разным специалистам с последующим утрясанием графиков работ каждого.</p>
+					</div>
+				</div>
+
+				<div class="benefits__container__item">
+					<div class="benefits__img">
+						<img src="img/chat.png" alt="">
+					</div>
+					<div class="benefits__container__inner">
+						<h3 class="title--center">Мы с Вами всегда на связи</h3>
+						<p class="benefits__text">Я консультирую своих заказчиков и после внедрения, поэтому Вам всегда будет к кому обратиться при возникающих вопросах.
+						</p>
+					</div>
+				</div>
+				<div class="benefits__container__item">
+					<div class="benefits__img">
+						<img src="img/money1.png" alt="">
+					</div>
+					<div class="benefits__container__inner">
+						<h3 class="title--center">Сумму работы оговариваем заренее</h3>
+						<p class="benefits__text">Перед стартом работы над проектом я произвожу оценку ее длительности и стоимости.</p>
+					</div>
+				</div>
+				<div class="benefits__container__item">
+					<div class="benefits__img">
+						<img src="img/garanti1.png" alt="">
+					</div>
+					<div class="benefits__container__inner">
+						<h3 class="title--center">Гарантия качественного решения</h3>
+						<p class="benefits__text">Огромный опыт позволяет мне находить решения как стандартных, так и совершенно нетиповых задач. Обратившись ко мне, Вы можете быть уверены, что если я взялся за решение Вашего вопроса, он не "повиснет в воздухе", а обязательно будет доведен до результата.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="about__count content">
+		<div class="wrapper">
+			<h2 class="about__count_title title">Обо мне в цифрах:</h2>
+
+			<div class="about__count_container">
+				
+				<div class="about__count_item">
+					<div class="about__count_container-column">
+						
+							<div class="about__count_circle">
+								<div class="about__count_number">
+									<div class="about__count_cifra">19</div> лет
+								</div>
+							</div>
+						
+					
+						<p class="about__count_text">на рынке СПб как 1C программист</p>
+					</div>
+				</div>
+
+				<div class="about__count_item">
+					<div class="about__count_container-column">
+						<div class="about__count_circle">
+							<div class="about__count_number">Более
+								<div class="about__count_cifra">50</div> 
+							</div>
+						</div>
+						<p class="about__count_text">организаций, с которыми сотрудничал за время работы</p>
+					</div>
+				</div>
+				
+
+				<div class="about__count_item">
+					<div class="about__count_container-column">
+						<div class="about__count_circle">
+							<div class="about__count_number">Более
+								<div class="about__count_cifra">5</div> 
+							</div>
+						</div>
+						<p class="about__count_text">собственных нетиповых крупных разработок</p>
+					</div>
+				</div>
+				
+
+				<div class="about__count_item">
+					<div class="about__count_container-column">
+						<div class="about__count_circle">
+							<div class="about__count_number">Более
+								<div class="about__count_cifra">5</div> 
+							</div>
+						</div>
+						<p class="about__count_text">отраслей 1С, в которых осуществлял разработки, внедрения, обучение</p>
+					</div>
+				</div>
+				
+
+				<div class="about__count_item">
+					<div class="about__count_container-column">
+						<div class="about__count_circle">
+							<div class="about__count_number">Более
+								<div class="about__count_cifra">300</div> 
+							</div>
+						</div>
+						<p class="about__count_text">внешних обработок, написанных мной</p>
+					</div>
+				</div>
+					
+
+				<div class="about__count_item">
+					<div class="about__count_container-column">
+						<div class="about__count_circle">
+							<div class="about__count_number">Более
+								<div class="about__count_cifra">100</div> 
+							</div>
+						</div>
+						<p class="about__count_text">внешних отчетов, написанных мной</p>
+					</div>
+				</div>
+					
+
+				<div class="about__count_item">
+					<div class="about__count_container-column">
+						<div class="about__count_circle">
+							<div class="about__count_number">Около
+								<div class="about__count_cifra">50</div> 
+							</div>
+						</div>
+						<p class="about__count_text">шаблонов печати, созданных мной</p>
+					</div>
+				</div>
+					
+			</div>
+		</div>
+	</section>
+
+	<div class="form__container content">
+		<div class="wrapper">
+			<form action="#" enctype="multipart/form-data" class="form" id="form" method="post">
+				<fieldset>
+					<Legend>Форма для связи со мной</Legend>
+					<p class="legend__title">Заполните форму, описав вашу проблему или вопрос. Я обязательно свяжусь с вами в течении дня в рабочее время.</p>
+					<p><label class="label__title">Кто вы?</label></p>
+					<p class="label__title"><select name="person">
+						<option value="Firma" selected>Организация</option>
+						<option value="Person">Частное лицо</option>
+						
+					</select></p>
+					
+					
+					<p><label class="label__title">Имя*:</label> 	</p>
+						<input type="text" name="username" id="" placeholder="Введите ваше имя" required>
+					<p><label class="label__title">Емейл*:</label> </p>
+						<input type="email" name="email" id="" placeholder="Введите ваш email" required>
+					<p><label class="label__title">Телефон*:</label></p>
+						<input type="tel" name="tel" id="" placeholder="Введите ваш телефон" required>
+					<p><label class="label__title">Ваше сообщение*:</label></p>
+					<textarea name="comments" id="" cols="30" rows="10" placeholder="Опишите вашу проблему или задайте вопрос" required></textarea>
+					<input type="submit" value="Отправить" class="submit header__link_right">
+				</fieldset>
+		</form>
+		</div>
+	</div>
+</main>
+
+	<footer class="footer content">
+		<div class="wrapper">
+			<div class="column">
+
+				<div class="footer__container">
+				
+					<div class="footer__menu">
+						<div class="footer__menu_item">
+							<h3><a href="#about" class="footer__link">Обо мне</a></h3>
+							<p class="footer__text">
+							Программист с 19-летним стажем работы решит ваш вопрос
+							</p>
+						</div>
+					</div>
+	
+					<div class="footer__menu">
+						<div class="footer__menu_item">
+							<h3><a href="#services" class="footer__link">Услуги</a></h3>
+							<p class="footer__text">
+								Цены и сроки работ обговорим заранее		
+							</p>
+						</div>
+					</div>
+	
+					<div class="footer__menu">
+						<div class="footer__menu_item">
+							<h3><a href="#form" class="footer__link">Контакты</a></h3>
+							<p class="footer__text">			
+									Заполните<a class="footer__link" href="#form">форму</a>Или свяжитесь по			
+								</p>
+								<a class="footer__link" href="mailto: maryfrontend@gmail.com">Email </a> 
+							</p>
+						</div>
+					</div>
+			</div>
+			<div class="footer__icons">
+				<a href="#">
+					<img src="img/telega30.png" alt="иконка телеграма" class="icon">
+				</a>
+				<a href="#">
+					<img src="img/vk30.png" alt="иконка телеграма" class="icon">
+				</a>
+			</div>
+			
+	</div>
+		</div>
+
+	</footer>
+	
+	
+	
+<script src="js/main.js"></script>
+
+</body>
+</html>
