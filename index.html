@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<!-- <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script> -->
-	<script defer src="libs/just-validate3.3.3.min.js"></script>
+	<!-- <script defer src="libs/just-validate3.3.3.min.js"></script> -->
 
 	
 </head>
@@ -18,26 +18,52 @@
 		<div class="modal-overlay">
 			<div class="modal modal--1" data-target="form-popup">
 				<button class="button__icon" data-path="close"></button>
-				<h3 class="modal-text">Оставьте заявку</h3>
-				<form name="1C" action="#" class="form form-modal" id="form" autocomplete="off" method="post" enctype="multipart/form-data" >
-					<label class="label" for="name">Имя*</label>
-						<input class="input input-name" type="text" name="name" id="name" placeholder="Введите Ваше имя" required>
-						<span class="error" aria-live="polite"></span>
-
-						<label class="label" for="tel">Телефон*</label>
-						<input class="input input-tel" type="tel" id="tel" name="tel" placeholder="Введите номер Вашего телефона" required>
-						<span class="error" aria-live="polite"></span>
-					
-					<label class="label" for="email">Емейл*</label>
-						<input class="input input-mail" type="email" id="email" placeholder="Введите Ваш email" name="email" required>
-						<span class="error" aria-live="polite"></span>
-					
-					<label class="label" for="message">Сообщение*</label>
-					<textarea class="textarea" name="message" id="message" rows="5" placeholder="Опишите Вашу проблему или вопрос" required></textarea>
-					<span class="error" aria-live="polite"></span>
-					<button class="btn btn-primary menu__item menu__link header__link_right" type="submit" id="submit-btn">Отправить заявку</button>
-				</form>
-			</div>
+				<h2 class="modal__text">Оставьте заявку</h2>
+				<div class="form">
+					<form action="#" enctype="multipart/form-data" class="form" id="form-popup" method="post">					
+						<div class="form__item">
+							<div class="form__label">
+								<div class="form__item">
+									<label for="formName" class="form__label" aria-label="required">Кто вы?*</label>
+								<select name="you" id="form__select" class="select req" required aria-required="true">
+									<option value="">Выберите вариант ответа</option>
+									<option value="2">Организация</option>
+									<option value="3">Частное лицо</option>
+								</select>
+								</div>
+								
+							</div>
+						</div>
+						<div class="form__item">
+							<label for="formName" class="form__label" aria-label="required">Имя:*</label>
+							<input type="text" id="formName" name="name" class="form__input req" required aria-required="true" pattern="^[A-Za-zА-Яа-яЁё\s]+$" title="В этом поле допустимы только буквы">
+						</div>
+						<div class="form__item">
+							<label for="formEmail" class="form__label" aria-label="required">Емейл:*</label>
+							<input type="email" id="formEmail" name="email" class="form__input req" required aria-required="true">
+						</div>
+						<div class="form__item">
+							<label for="formtel" class="form__label" aria-label="required">Телефон:*</label>
+							<input type="tel" id="formTel" name="tel" class="form__input req" required pattern="\+?[0-9\s\-\(\)]+" title="В этом поле допустимы только цифры" aria-required="true">
+						</div>
+		
+						<div class="form__item">
+							<label for="formMessage" class="form__label" aria-label="required">Сообщение:*</label>
+							<textarea name="message" id="formMessage" class="form__input req" placeholder="Опишите свою проблему или вопрос" required aria-required="true"></textarea>
+						</div>
+		
+						<div class="form__item">
+							<div class="checkbox">
+								<input type="checkbox" name="agreement" id="formAgreement" class="checkbox__input req" checked required>
+								<label for="formAgreement" class="checkbox__label" aria-label="required" checked><span>Согласен на обработку персональных данных</span></label>
+							</div>
+						</div>
+						<div class="form__button">
+							<button type="submit" class="btn__send btn menu__item menu__link header__link_right" aria-label="Отправить">Отправить</button>
+						</div>
+					</form>
+		
+		</div>
 		</div>
 	</div>
 	
@@ -128,26 +154,23 @@
 	<section id="services" class="services content">
 		<div class="wrapper">
 			<h2 class="services__title title">Мои услуги:</h2>
-			<ul class="cervices__text">
-				<li class="cervices__item-1 item">
+			<ul class="services__text">
+				<li class="services__item-1 item">
 					
 					Разработка внешних отчетов и обработок шаблонов печати для любых конфигураций 1C;
 				</li>
-				<li class="cervices__item-2 item">Разработка и обслуживание любых конфигураций 1C;</li>
-				<li class="cervices__item-3 item">Обновление типовых и нетиповых конфигураций;</li>
-				<li class="cervices__item-4 item">Организация взаимодействия между любыми базами 1С (COM, OLE, Планы обмена, КД2);</li>
-				<li class="cervices__item-5 item">Перенос данных любой сложности из старой конфигурации 1С в новую;</li>
-				<li class="cervices__item-6 item">Внесение НСИ и документов из внешних файлов;</li>
-				<li class="cervices__item-7 item">Оптимизация создания отчетов;</li>
-				<li class="cervices__item-8 item">Консультирование по вопросам 1C.</li>
+				<li class="services__item-2 item">Разработка и обслуживание любых конфигураций 1C;</li>
+				<li class="services__item-3 item">Обновление типовых и нетиповых конфигураций;</li>
+				<li class="services__item-4 item">Организация взаимодействия между любыми базами 1С (COM, OLE, Планы обмена, КД2);</li>
+				<li class="services__item-5 item">Перенос данных любой сложности из старой конфигурации 1С в новую;</li>
+				<li class="services__item-6 item">Внесение НСИ и документов из внешних файлов;</li>
+				<li class="services__item-7 item">Оптимизация создания отчетов;</li>
+				<li class="services__item-8 item">Работа с веб сервисом</li>
+				<li class="services__item-9 item">Создание самописной конфигурации на основе БСП;</li>
+				<li class="services__item-10 item">Модернизация типовых конфигураций с помощью расширений;</li>
+				<li class="services__item-11 item">Консультирование по вопросам 1C.</li>
 			</ul>
 			<button class="btn about__link servises__link__container header__link_right" data-path="form-popup">Задать вопрос</button>
-			<!-- <div class="servises__link__container">
-				<a class="servises__link__container header__link_right" href="">Задать вопрос</a>
-
-			</div> -->
-			
-		
 		</div>
 	</section>
 
@@ -174,6 +197,14 @@
 				<div class="configurations__content-4 maket maket--configurations">
 					<p class="configurations__text">ЕРП</p>
 					</div>
+				
+					<div class="configurations__content-4 maket maket--configurations">
+						<p class="configurations__text">ЗУП</p>
+						</div>
+				
+						<div class="configurations__content-4 maket maket--configurations">
+							<p class="configurations__text">УНФ</p>
+							</div>
 
 				<div class="configurations__content-5 maket maket--configurations">
 				<p class="configurations__text-5">Отраслевые решения 1С и др.</p>
@@ -326,29 +357,53 @@
 
 	<div class="form__container content">
 		<div class="wrapper">
-			<form action="#" enctype="multipart/form-data" class="form" id="form" method="post">
-				<fieldset>
-					<Legend>Форма для связи со мной</Legend>
-					<p class="legend__title">Заполните форму, описав вашу проблему или вопрос. Я обязательно свяжусь с вами в течении дня в рабочее время.</p>
-					<p><label class="label__title">Кто вы?</label></p>
-					<p class="label__title"><select name="person">
-						<option value="Firma" selected>Организация</option>
-						<option value="Person">Частное лицо</option>
-						
-					</select></p>
-					
-					
-					<p><label class="label__title">Имя*:</label> 	</p>
-						<input type="text" name="username" id="" placeholder="Введите ваше имя" required>
-					<p><label class="label__title">Емейл*:</label> </p>
-						<input type="email" name="email" id="" placeholder="Введите ваш email" required>
-					<p><label class="label__title">Телефон*:</label></p>
-						<input type="tel" name="tel" id="" placeholder="Введите ваш телефон" required>
-					<p><label class="label__title">Ваше сообщение*:</label></p>
-					<textarea name="comments" id="" cols="30" rows="10" placeholder="Опишите вашу проблему или задайте вопрос" required></textarea>
-					<input type="submit" value="Отправить" class="submit header__link_right">
-				</fieldset>
-		</form>
+				<div class="form">
+					<form action="#" enctype="multipart/form-data" class="form" id="form" method="post">					
+						<h1 class="form__title title">
+							Оставьте заявку
+						</h1>
+						<div class="form__item">
+							<div class="form__label">
+								<div class="form__item">
+									<label for="formName" class="form__label" aria-label="required">Кто вы?*</label>
+								<select name="you" id="form__select" class="select req" required aria-required="true">
+									<option value="">Выберите вариант ответа</option>
+									<option value="2">Организация</option>
+									<option value="3">Частное лицо</option>
+								</select>
+								</div>
+								
+							</div>
+						</div>
+						<div class="form__item">
+							<label for="formName" class="form__label" aria-label="required">Имя:*</label>
+							<input type="text" id="formName" name="name" class="form__input req" required aria-required="true" pattern="^[A-Za-zА-Яа-яЁё\s]+$" title="В этом поле допустимы только буквы">
+						</div>
+						<div class="form__item">
+							<label for="formEmail" class="form__label" aria-label="required">Емейл:*</label>
+							<input type="email" id="formEmail" name="email" class="form__input req" required aria-required="true">
+						</div>
+						<div class="form__item">
+							<label for="formtel" class="form__label" aria-label="required">Телефон:*</label>
+							<input type="tel" id="formTel" name="tel" class="form__input req" required pattern="\+?[0-9\s\-\(\)]+" title="В этом поле допустимы только цифры" aria-required="true">
+						</div>
+		
+						<div class="form__item">
+							<label for="formMessage" class="form__label" aria-label="required">Сообщение:*</label>
+							<textarea name="message" id="formMessage" class="form__input req" placeholder="Опишите свою проблему или вопрос" required aria-required="true"></textarea>
+						</div>
+		
+						<div class="form__item">
+							<div class="checkbox">
+								<input type="checkbox" name="agreement" id="formAgreement" class="checkbox__input req" checked required>
+								<label for="formAgreement" class="checkbox__label" aria-label="required" checked><span>Согласен на обработку персональных данных</span></label>
+							</div>
+						</div>
+						<div class="form__button">
+							<button type="submit" class="btn__send btn menu__item menu__link header__link_right" aria-label="Отправить">Отправить</button>
+						</div>
+					</form>
+				</div>
 		</div>
 	</div>
 </main>
