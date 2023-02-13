@@ -14,6 +14,46 @@ for (let anchor of anchors) {
   })
 }
 
+//Маска для телефона
+
+window.addEventListener("DOMContentLoaded", function() {
+	[].forEach.call( document.querySelectorAll('.form__input'), function(input) {
+	var keyCode;
+	function mask(event) {
+			event.keyCode && (keyCode = event.keyCode);
+			var pos = this.selectionStart;
+			if (pos < 3) event.preventDefault();
+			var matrix = "+7 (___) ___ ____",
+					i = 0,
+					def = matrix.replace(/\D/g, ""),
+					val = this.value.replace(/\D/g, ""),
+					new_value = matrix.replace(/[_\d]/g, function(a) {
+							return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+					});
+			i = new_value.indexOf("_");
+			if (i != -1) {
+					i < 5 && (i = 3);
+					new_value = new_value.slice(0, i)
+			}
+			var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+					function(a) {
+							return "\\d{1," + a.length + "}"
+					}).replace(/[+()]/g, "\\$&");
+			reg = new RegExp("^" + reg + "$");
+			if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+			if (event.type == "blur" && this.value.length < 5)  this.value = ""
+	}
+
+	input.addEventListener("input", mask, false);
+	input.addEventListener("focus", mask, false);
+	input.addEventListener("blur", mask, false);
+	input.addEventListener("keydown", mask, false)
+
+});
+
+});
+
+
 // Modal window---------------------
 
 
@@ -87,67 +127,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		let fullHeaderHeight = header.offsetHeight;
 		let aboutHeight = about.offsetHeight / 2;
 		let height = fullHeaderHeight + aboutHeight; 
-
-		
-	
-		// console.log('scrollTop ' + scrollTop);
-		// console.log('headerHeight ' + headerHeight);
 	
 		if (scrollTop >=headerHeight && scrollTop < (height*2)) {
 			about.classList.add('animation');
-			// about.style.opacity = 1;
-			// about.style.transition = `5s`;
-			
-			//  console.log('added ');
-			
+						
 			} else {
 				about.classList.remove('animation');
-			// 	about.style.opacity = 0;
-			// about.style.transition = `5s`;
-
-			//  console.log('removed ');
 			}
-		
-	});
+		});
 });
 
-// Подключаем inputmask
-
-[].forEach.call(document.querySelectorAll('input[type="tel"]'), function (input) {
-	let keyCode;
-	function mask(event) {
-			event.keyCode && (keyCode = event.keyCode);
-			let pos = this.selectionStart;
-			if (pos < 3) event.preventDefault();
-			let matrix = "+7 (___) ___-__-__",
-					i = 0,
-					def = matrix.replace(/\D/g, ""),
-					val = this.value.replace(/\D/g, ""),
-					newValue = matrix.replace(/[_\d]/g, function (a) {
-							return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
-					});
-			i = newValue.indexOf("_");
-			if (i != -1) {
-					i < 5 && (i = 3);
-					newValue = newValue.slice(0, i);
-			}
-			let reg = matrix.substr(0, this.value.length).replace(/_+/g,
-					function (a) {
-							return "\\d{1," + a.length + "}";
-					}).replace(/[+()]/g, "\\$&");
-			reg = new RegExp("^" + reg + "$");
-			if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = newValue;
-			if (event.type == "blur" && this.value.length < 5) this.value = "";
-	}
-
-	input.addEventListener("input", mask, false);
-	input.addEventListener("focus", mask, false);
-	input.addEventListener("blur", mask, false);
-	input.addEventListener("keydown", mask, false);
-});
-
-
-// добавление галочки
+// добавление анимированной галочки
 
 window.addEventListener('scroll', () => {
 	const header = document.querySelector('.header');
@@ -206,7 +196,10 @@ window.addEventListener('scroll', () => {
 
 		// console.log(item[i]);
 		}
+	
+		//Отправка формы на почту
 
-		//Настройка валидации
+		
+
 		
 		

@@ -81,6 +81,17 @@ li {
 	
  }
 
+ button {
+  font-family: inherit; /* For all browsers */
+  font-size: 100%; /* For all browsers */
+  line-height: 1.15; /* For all browsers */
+  margin: 0; /* Firefox and Safari have margin */
+  overflow: visible; /* Edge hides overflow */
+  text-transform: none; /* Firefox inherits text-transform */
+  
+}
+
+
  .header {
 	background: url('../img/bg_header.png');
 	background-size: cover;
@@ -110,13 +121,10 @@ li {
 	 margin-right: 4em;
  }
 
-
  .container__header {
 	max-width: 80vw;
 	margin: 0 auto;
-	/* padding: 1em; */
-	}
-	
+}
 
 .header__title {
 	padding: 0.3em;
@@ -164,7 +172,7 @@ li {
 /* Стили кнопки-ссылки */
 
 
-.header__link_right {
+.btn {
 	width: 200px;
 	padding: 0.8em 2em;
 	text-align: center;
@@ -176,12 +184,12 @@ li {
 	border-radius: 0.5em;
 	box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.15);
 }
-.header__link_right:hover {
+.btn:hover {
 	cursor: pointer;
 	color: #124;
 }
 
-.header__link_right:active {
+.btn:active {
 	box-shadow: inset 0 0 0.5em rgb(68, 56, 17),
 							inset 0 0.5em 1em rgba(0, 0, 0,0.4);
 }
@@ -1091,7 +1099,6 @@ textarea.form__input {
 	justify-content: center;
 }
 
-
 /* Стили для модального окна */
 
 
@@ -1106,11 +1113,7 @@ textarea.form__input {
 	margin: 0 auto;
 }
 
-.modal {
-	display: none;
-}
-
-.modal-backdrop {
+/* .modal-backdrop {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -1118,20 +1121,20 @@ textarea.form__input {
 	left: 0;
 	background-color: rgba(0, 0, 0, 0.5);
 	z-index: 1;
-}
+} */
 
-.modal-body {
+/* .modal-body {
 	position: fixed;
 	top: 3em;
 	bottom: 3em;
 	right: 20%;
 	left: 20%;
-	/* padding: 2em 3em; */
+	
 	background-color: #fff;
 	overflow: auto;
 	z-index: 2;
 	
-}
+} */
 
 .modal-close {
 	cursor: pointer;
@@ -1174,14 +1177,15 @@ textarea.form__input {
 }
 
 .modal {
+	display: none;
 	background-color: #fff;
-	width: 320px;
+	min-width: 320px;
 	height: 80vh;
 	overflow: auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	display: none;
+	position: relative;	
 }
 
 .modal-overlay--visible {
@@ -1200,6 +1204,7 @@ textarea.form__input {
 
 
 .modal__text {
+	margin-top: 20px;
 	text-align: center;
 	
 }
@@ -1211,16 +1216,14 @@ textarea.form__input {
 }
 
 .button__icon {
-	position: relative;
-	/* display: inline-block; */
-	
+	position: absolute;	
 	width: 30px;
 	height: 30px;
 	border-radius: 100%;
 	background-color: #bfbfbf;
 	border: 0;
 	top: 10px;
-	left: 260px;
+	right: 20px;
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
@@ -1376,3 +1379,5 @@ img.icon {
 		margin-bottom: 0;
 	}
 }
+
+
